@@ -1,0 +1,136 @@
+main{
+  height: 6000px;
+  background-color:rgb(137, 193, 210); }
+  
+  h1 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: flex;
+  justify-content: center;
+  }
+  
+  #img1 {
+      bottom: 15%;
+      position: absolute;
+      -webkit-animation: linear infinite;
+      -webkit-animation-name: run;
+      -webkit-animation-duration: 5s;
+    }
+    @-webkit-keyframes run {
+      0% {
+        left: 0;
+      }
+      48% {
+        -webkit-transform: rotateY(0deg); 
+      }
+      50% { 
+        left : calc(65% - 65px);
+        -webkit-transform: rotateY(180deg); 
+      }
+      98% {
+        -webkit-transform: rotateY(180deg); 
+      }
+      100% {
+        left: 0;    
+         -webkit-transform: rotateY(0deg);
+      }
+    }
+  
+  
+  
+  #deuxmille {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: -1720px;
+  margin-bottom: 0px;
+      font-size: 24px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  p {
+  
+  display: flex;
+  justify-content: right;
+  }
+  
+  
+  
+  
+  #img2 {
+  
+  
+  bottom: 15%;
+  
+  -webkit-animation: linear infinite;
+  -webkit-animation-name: run;
+  -webkit-animation-duration: 1.5s;
+  }
+  @-webkit-keyframes run {
+  0% {
+    left: 0;
+  }
+  48% {
+    -webkit-transform: rotateY(0deg); 
+  }
+  50% { 
+    left : calc(65% - 65px);
+    -webkit-transform: rotateY(180deg); 
+  }
+  98% {
+    -webkit-transform: rotateY(180deg); 
+  }
+  100% {
+    left: 0;    
+     -webkit-transform: rotateY(0deg);
+  }
+    }
+  
+  #img2 {
+      padding-top: 4000px;
+        }
+  
+  
+  #quatremille {
+      padding-top: 1800px;
+      padding-bottom: 1900px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+          font-size: 24px;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  
+      
+      
+  #img3 {
+      display: flex;
+      justify-content: right;
+  
+      bottom: 15%;
+      
+      -webkit-animation: linear infinite;
+      -webkit-animation-name: run;
+      -webkit-animation-duration: 1.5s;
+      }
+      @-webkit-keyframes run {
+      0% {
+        left: 0;
+      }
+      48% {
+        -webkit-transform: rotateY(0deg); 
+      }
+      50% { 
+        left : calc(65% - 65px);
+        -webkit-transform: rotateY(180deg); 
+      }
+      98% {
+        -webkit-transform: rotateY(180deg); 
+      }
+      100% {
+        left: 0;    
+         -webkit-transform: rotateY(0deg);
+      }
+        }
+      
+      #img2 {
+          padding-top: 4000px;
+            }
