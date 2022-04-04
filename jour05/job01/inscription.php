@@ -16,13 +16,7 @@ if (isset($_POST['email'])) {
 		]);
 		$takenmail = true;
         
-	} else if (empty($result)) {
-		echo json_encode([
-			"code"=>10
-		]);
-		$takenmail = false;
-	
-	}
+	} 
 
 
 	

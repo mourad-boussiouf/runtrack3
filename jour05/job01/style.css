@@ -489,8 +489,8 @@ p:nth-child(7) {
 
 
 
-.registerhidden{
-display: none;
+.hiddenclass{
+display: none!important;
 }
 
 .registerjiggle {

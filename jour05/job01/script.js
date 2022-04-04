@@ -254,14 +254,16 @@ registerform.addEventListener('submit', function (e) {
     })
         .then(res => res.json())
         .then(data => { console.log(data)
+          if (data['code'] == 42) {
+          htmlcontent[2].innerHTML = "• Votre adresse e-mail est déjâ prise."
+          jiggle.classList.add("registerjiggle");
+          noerror == false
+          } else {registerform.classList.toggle('hiddenclass')
+        console.log("catoggleparici")}
         })
   
     
     
-
-
-
-
 
 
 
