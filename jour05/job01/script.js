@@ -12,7 +12,8 @@ var password = document.getElementById('password');
 var passwordconfirm = document.getElementById('passwordconfirm');
 let htmlcontent =  document.querySelectorAll("p");
 let jiggle = document.getElementById('registerjiggle');
-const registerform = document.querySelector('form');
+const registerform = document.querySelector('#register-form');
+const loginform = document.querySelector('#login-form');
 let buttonregister = document.getElementById('buttonregister');
 let noerror = false;
 let noempty = false;
@@ -29,6 +30,7 @@ let regexUpperCase = /[A-Z]+/;
 let regexNum = /[0-9]+/;
 let regexEmail = /\S+@\S+\.\S+/;
 
+loginform.classList.add("hiddenclass");
 
 // Si l'uppercase est absente du champs, remplir le paragraphe html par le message d'erreur.
 nom.addEventListener('keyup', function () {
@@ -258,8 +260,15 @@ registerform.addEventListener('submit', function (e) {
           htmlcontent[2].innerHTML = "• Votre adresse e-mail est déjâ prise."
           jiggle.classList.add("registerjiggle");
           noerror == false
-          } else {registerform.classList.toggle('hiddenclass')
-        console.log("catoggleparici")}
+
+          } else if (data['code'] == 10) {
+            registerform.classList.add("hiddenclass");
+            loginform.classList.remove("hiddenclass");
+          
+          
+
+          noerror == true
+          } 
         })
   
     

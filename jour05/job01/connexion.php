@@ -25,7 +25,7 @@ function  select(){
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<div class="container">
+<div class="container2">
 	<div class="screen">
 		<div class="screen__content">
 			<form class="login">

@@ -44,7 +44,7 @@ echo'<h1></h1>';
 
 <div id = registerjiggle>
 
-<!-- partial:index.partial.html -->
+<!-- INSCRIPTION-->
 <div class="container">
 	<div class="screen">
 		
@@ -83,6 +83,29 @@ echo'<h1></h1>';
 				</button>				
 			</form>
 
+            <form class="login" id = "login-form">
+				<div class="login__field">
+					<i class="login__icon fas fa-user"></i>
+					<input type="text" class="login__input" placeholder="Email" required>
+				</div>
+				<div class="login__field">
+					<i class="login__icon fas fa-lock"></i>
+					<input type="password" class="login__input" placeholder="Mot de passe" required>
+				</div>
+				<button class="button login__submit">
+					<span class="button__text">Se connecter</span>
+					<i class="button__icon fas fa-chevron-right"></i>
+				</button>				
+			
+			<div class="social-login">
+				<h3>log in via</h3>
+				<div class="social-icons">
+					<a href="#" class="social-login__icon fab fa-instagram"></a>
+					<a href="#" class="social-login__icon fab fa-facebook"></a>
+					<a href="#" class="social-login__icon fab fa-twitter"></a>
+				</div>
+			</div></form>
+
             <p class="red"></p> 
 			<p class="red"></p> 
 			<p class="red"></p> 
@@ -99,11 +122,15 @@ echo'<h1></h1>';
 			<span class="screen__background__shape screen__background__shape1"></span>
 		</div>		
 	
-</div>
-<!-- partial -->
-  
+<!-- CONNEXION -->
+
 
 </div>
+
+
+
+
+
 
 
 

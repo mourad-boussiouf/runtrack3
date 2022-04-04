@@ -490,7 +490,7 @@ p:nth-child(7) {
 
 
 .hiddenclass{
-display: none!important;
+display: none !important;
 }
 
 .registerjiggle {
