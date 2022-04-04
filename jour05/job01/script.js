@@ -245,22 +245,25 @@ registerform.addEventListener('submit', function (e) {
 
 
 
-    const formData = new FormData(this)
+    const formData = new FormData(registerform)
+
     fetch('inscription.php', {
 
-        method: 'post',
+        method: 'POST',
         body: formData
     })
+        .then(res => res.json())
+        .then(data => { console.log(data)
+        })
+  
     
-    .then(function (reponse) {
-      return reponse.text();    
-    })
     
-    .then(function (text) {
 
-      console.log(text);
 
-    })
+
+
+
+
 
   }
 

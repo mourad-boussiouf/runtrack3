@@ -1,11 +1,34 @@
 <?php
 
-var_dump($_POST["nom"]);
+$takenmail = true;
+
+if (isset($_POST['email'])) {
+	$email = $_POST['email'];
+    $bdd = new PDO("mysql:host = localhost ; dbname=utilisateurs", 'root', '');
+    $var = $bdd->prepare("SELECT * FROM utilisateurs WHERE email='$email'");
+    $var->execute();
+    $result = $var->fetch();
+    if (!empty($result)) {
+
+        echo json_encode([
+            "code"=>42,
+            "erreur" =>'mail deja pris'
+		]);
+		$takenmail = true;
+        
+	} else if (empty($result)) {
+		echo json_encode([
+			"code"=>10
+		]);
+		$takenmail = false;
+	
+	}
 
 
+	
+}
 
-
-if (isset($_POST['nom'])) {
+if (isset($_POST['nom']) && $takenmail == false) {
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
     $email = $_POST['email'];
@@ -19,3 +42,5 @@ if (isset($_POST['nom'])) {
 
 
 }
+
+?>

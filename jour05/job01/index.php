@@ -53,27 +53,27 @@ echo'<h1></h1>';
 			<form  id = "register-form" method = "POST">
 
 				<div class="register__field">	
-					<input type="text" id = "nom" class="login__input" placeholder="Nom" required>
+					<input type="text" id = "nom" class="login__input" name = "nom" placeholder="Nom" required>
 				</div>
 
                 <div class="register__field">	
-					<input type="text" id = "prenom" class="login__input" placeholder="Prénom" required>
+					<input type="text" id = "prenom" class="login__input" name = "prenom" placeholder="Prénom" required>
 				</div>
 
                 <div class="register__field">
 					
-					<input type="text" id = "email" class="login__input" placeholder="Email" required>
+					<input type="text" id = "email" class="login__input" name = "email" placeholder="Email" required>
                     
 				</div>
 
 				<div class="register__field">
 					
-					<input type="password"  id = "password" class="login__input" placeholder="Mot de passe" required>
+					<input type="password"  id = "password" class="login__input" name = "password" placeholder="Mot de passe" required>
 				</div>
 
                 <div class="register__field">
 					
-					<input type="password" id = "passwordconfirm" class="login__input" placeholder="Confirmer mot de passe" required>
+					<input type="password" id = "passwordconfirm" class="login__input" name = "password2" placeholder="Confirmer mot de passe" required>
 				</div>
 
 
