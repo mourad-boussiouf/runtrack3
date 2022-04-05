@@ -521,6 +521,7 @@ display: none !important;
 }
 
 h1 {
+padding-top: 10%;
 display: flex;
 justify-content: center;
 font-size: 36px;

@@ -13,6 +13,8 @@ if (isset($_POST['email'])) {
 
         echo json_encode([
             "code"=>10,
+			"nom"=>$result['nom'],
+			"prenom"=>$result['prenom'],
 		]);
 		
 	}

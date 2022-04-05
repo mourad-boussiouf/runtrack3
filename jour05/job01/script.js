@@ -13,6 +13,7 @@ const registerform = document.querySelector('#register-form');
 const loginform = document.querySelector('#login-form');
 let card = document.querySelector('.screen__content_register');
 let bonjour = document.querySelector('h1');
+let page = document.querySelector('.container');
 let noerror = false;
 let noempty = false;
 let random1 = Math.floor(Math.random() * 6);
@@ -287,8 +288,10 @@ v.addEventListener('keyup', (event) => {
     
               } else if (data['code'] == 10) {
                
-                card.classList.add("hiddenclass");
+                page.classList.add("hiddenclass");
+                bonjour.append('Bienvenue ' + '' + data['nom'])
                 bonjour.classList.toggle("hiddenclass");
+
               
     
               noerror == true

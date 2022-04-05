@@ -1,11 +1,6 @@
-
-<h1> Bonjour</h1>';
-
-
-
-
-
-
+<?php session_start(); ?>
+<br><br>
+<h1></h1>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -20,10 +15,7 @@
 </head>
 <body>
 
-
-
 <div id = registerjiggle>
-
 <!-- INSCRIPTION-->
 <div class="container">
 <header>
