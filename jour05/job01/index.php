@@ -1,27 +1,7 @@
-<?php
-session_start();
 
-if(isset($_SESSION['id'])){
-echo'<h1></h1>';
-}
- ?>
+<h1> Bonjour</h1>';
 
 
-<?php if(0 == 1){ ?>
-
-<div class = 'link_container'>
-
-    <div class = 'login_link'>
-    <a href="connexion.php">Connexion</a>
-    </div>
-
-    <div class = 'register_link'>
-    <a href="inscription.php">Inscription</a>
-    </div>
-
-</div>
-
-<?php } ?>
 
 
 
@@ -46,7 +26,21 @@ echo'<h1></h1>';
 
 <!-- INSCRIPTION-->
 <div class="container">
-	<div class="screen">
+<header>
+<div class = 'link_container'>
+
+    <div class = 'login_link'>
+    <a href="connexion.php">Connexion</a>
+    </div>
+
+    <div class = 'register_link'>
+    <a href="inscription.php">Inscription</a>
+    </div>
+
+</div>
+</header>
+
+ <div class="screen">
 		
 		<div class="screen__content_register">
 
@@ -86,13 +80,13 @@ echo'<h1></h1>';
             <form class="login" id = "login-form">
 				<div class="login__field">
 					<i class="login__icon fas fa-user"></i>
-					<input type="text" class="login__input" placeholder="Email" required>
+					<input type="text" class="login__input" placeholder="Email" name = "email" id = "loginmail" required>
 				</div>
 				<div class="login__field">
 					<i class="login__icon fas fa-lock"></i>
-					<input type="password" class="login__input" placeholder="Mot de passe" required>
+					<input type="password" class="login__input" placeholder="Mot de passe" name = "password" id = "loginpassword"  required>
 				</div>
-				<button class="button login__submit">
+				<button class="button login__submit" type = "submit" id = "buttonlogin">
 					<span class="button__text">Se connecter</span>
 					<i class="button__icon fas fa-chevron-right"></i>
 				</button>				
@@ -126,18 +120,6 @@ echo'<h1></h1>';
 
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
 </body>
 </html>

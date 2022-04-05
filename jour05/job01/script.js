@@ -1,20 +1,18 @@
 document.addEventListener("DOMContentLoaded", (event) => {
 
-
-
-
-
-
 let nom = document.getElementById('nom');
 let prenom = document.getElementById('prenom');
 let email = document.getElementById('email');
+let loginmail = document.getElementById('loginmail');
+let loginpassword = document.getElementById('loginpassword');
 var password = document.getElementById('password');
 var passwordconfirm = document.getElementById('passwordconfirm');
 let htmlcontent =  document.querySelectorAll("p");
 let jiggle = document.getElementById('registerjiggle');
 const registerform = document.querySelector('#register-form');
 const loginform = document.querySelector('#login-form');
-let buttonregister = document.getElementById('buttonregister');
+let card = document.querySelector('.screen__content_register');
+let bonjour = document.querySelector('h1');
 let noerror = false;
 let noempty = false;
 let random1 = Math.floor(Math.random() * 6);
@@ -31,6 +29,7 @@ let regexNum = /[0-9]+/;
 let regexEmail = /\S+@\S+\.\S+/;
 
 loginform.classList.add("hiddenclass");
+bonjour.classList.add("hiddenclass");
 
 // Si l'uppercase est absente du champs, remplir le paragraphe html par le message d'erreur.
 nom.addEventListener('keyup', function () {
@@ -50,8 +49,6 @@ nom.addEventListener('keyup', function () {
     
 })
 
-
-
 prenom.addEventListener('keyup', function () {
   if (regexUpperCase.test(this.value) == false ) {
       if (htmlcontent[1].innerHTML.length == 0) {
@@ -69,7 +66,6 @@ prenom.addEventListener('keyup', function () {
     }
 
 })
-
 
 email.addEventListener('keyup', function () {
   if (regexEmail.test(this.value) == false ) {
@@ -115,8 +111,6 @@ passwordconfirm.addEventListener('keyup', function () {
       noerror = true;
     }  
 })
-
-
 
 // Si il y a une erreur, le champs se colorie en rose, sinon il reste blanc
 
@@ -212,17 +206,7 @@ v.addEventListener('keyup', (event) => {
 
 })
 
-
-
-
-
-
-
-
-
-
-
-registerform.addEventListener('submit', function (e) {
+ registerform.addEventListener('submit', function (e) {
 
   e.preventDefault();
 
@@ -262,8 +246,8 @@ registerform.addEventListener('submit', function (e) {
           noerror == false
 
           } else if (data['code'] == 10) {
-            registerform.classList.add("hiddenclass");
-            loginform.classList.remove("hiddenclass");
+            registerform.classList.toggle("hiddenclass");
+            loginform.classList.toggle("hiddenclass");
           
           
 
@@ -277,11 +261,43 @@ registerform.addEventListener('submit', function (e) {
 
 
   }
+ })
+
+  loginform.addEventListener('submit', function (e) {
+
+    e.preventDefault();
+
+    if (loginpassword.value.length < 1 || 
+      loginmail.value.length < 1) {  htmlcontent[5].innerHTML = "• Veuillez remplir tous les champs du formulaire.";
+      jiggle.classList.add("registerjiggle");
+      } else {
+        const formData2 = new FormData(loginform)
+
+        fetch('connexion.php', {
+    
+            method: 'POST',
+            body: formData2
+        })
+            .then(res => res.json())
+            .then(data => { console.log(data)
+              if (data['code'] == 50) {
+              htmlcontent[2].innerHTML = "• Cet utilisateur n'existe pas."
+              jiggle.classList.add("registerjiggle");
+              noerror == false
+    
+              } else if (data['code'] == 10) {
+               
+                card.classList.add("hiddenclass");
+                bonjour.classList.toggle("hiddenclass");
+              
+    
+              noerror == true
+              } 
+            })
+
+      }
 
 
-
-
-
-})
+  })
 
 })
